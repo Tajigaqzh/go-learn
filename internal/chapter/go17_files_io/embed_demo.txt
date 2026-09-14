@@ -1,0 +1,2 @@
+Hello from go:embed!
+这是第 17 章嵌入文件的演示内容。
