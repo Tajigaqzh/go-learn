@@ -47,7 +47,7 @@ pnpm docs:preview    # 预览构建结果
 | --- | --- | --- | --- |
 | 第 1 章 | 环境搭建与第一个 Go 程序 | [go01-hello](docs/guide/go01-hello.md) | `internal/chapter/go01_hello/` |
 | 第 2 章 | 变量、常量与基本类型 | [go02-variables](docs/guide/go02-variables.md) | `internal/chapter/go02_variables/` |
-| 第 3 章 | 运算符与格式化输出 | 规划中 | `internal/chapter/go03_operators_fmt/` |
+| 第 3 章 | 运算符与格式化输出 | [正文](docs/guide/go03-operators-fmt.md) | `internal/chapter/go03_operators_fmt/` |
 | 第 4 章 | 控制流 | 规划中 | `internal/chapter/go04_control_flow/` |
 | 第 5 章 | 函数与闭包 | 规划中 | `internal/chapter/go05_functions/` |
 | 第 6 章 | 指针、值与内存入门 | 规划中 | `internal/chapter/go06_pointers/` |

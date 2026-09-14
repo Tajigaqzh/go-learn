@@ -11,10 +11,12 @@ package main
 import (
 	"go-learn/internal/chapter/go01_hello"
 	"go-learn/internal/chapter/go02_variables"
+	"go-learn/internal/chapter/go03_operators_fmt"
 )
 
 func main() {
 	// 章节注册区：新增章节时在这里按顺序追加 goNN_主题.Demo()。
 	go01_hello.Demo()
 	go02_variables.Demo()
+	go03_operators_fmt.Demo()
 }
