@@ -20,7 +20,7 @@
 | 章节 | 主题 | 你会学到 | 配套代码 |
 | --- | --- | --- | --- |
 | 第 1 章 | [环境搭建与第一个 Go 程序](./go01-hello) | `go env`、GOPATH 与 module 的区别、`go mod init`、`go run` / `build` / `install` / `fmt` / `vet` / `doc`、`main` 包与包的初始化、项目目录布局、工具链与 IDE 配置 | `internal/chapter/go01_hello/` |
-| 第 2 章 | 变量、常量与基本类型（规划中） | `var` 与 `:=`、零值、批量声明、作用域与遮蔽、`const` 与 `iota`、无类型常量、整数族与溢出、浮点精度、复数、`byte` 与 `rune`、显式类型转换、类型定义与类型别名、空白标识符、命名规范 | `internal/chapter/go02_variables/` |
+| 第 2 章 | [变量、常量与基本类型](./go02-variables) | `var` 与 `:=`、零值、批量声明、作用域与遮蔽、`const` 与 `iota`、无类型常量、整数族与溢出、浮点精度、复数、`byte` 与 `rune`、显式类型转换、类型定义与类型别名、空白标识符、命名规范 | `internal/chapter/go02_variables/` |
 | 第 3 章 | 运算符与格式化输出（规划中） | 算术 / 比较 / 逻辑 / 位运算与移位、运算符优先级、Go 没有三元运算符、`fmt` 家族、常用动词 `%v` `%+v` `%#v` `%T` `%q`、宽度与精度、`Stringer` 与 `error` 对输出的影响、`go vet` 抓格式化错误 | `internal/chapter/go03_operators_fmt/` |
 | 第 4 章 | 控制流（规划中） | `if` 与初始化语句、`for` 的四种形态、`range` 遍历各种类型、`break`/`continue` 与标签、`switch` 与无表达式 `switch`、`fallthrough`、`goto`、Go 1.22 循环变量语义变化 | `internal/chapter/go04_control_flow/` |
 | 第 5 章 | 函数与闭包（规划中） | 函数签名、多返回值、命名返回值、变参、函数是一等值、闭包与捕获、`defer` 的执行顺序与参数求值时机、`defer` 配合命名返回值的坑、递归、`init` | `internal/chapter/go05_functions/` |
