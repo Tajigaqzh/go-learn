@@ -84,7 +84,11 @@ pnpm docs:preview    # 预览构建结果
 
 推送到 `main` 分支后，GitHub Actions 会自动跑 Go 检查并构建 VitePress 发布到 GitHub Pages：
 
-- CI：`.github/workflows/ci.yml`
-- 文档部署：`.github/workflows/deploy.yml`
+- CI：`.github/workflows/ci.yml`——`gofmt`、`go vet`、`go build`、`go test -race`、`go run ./cmd/go-learn`，外加文档站的 `pnpm docs:build`
+- 文档部署：`.github/workflows/deploy.yml`——构建 VitePress 并发布到 GitHub Pages
+
+首次部署前需要手动开启一次 Pages：仓库 **Settings → Pages → Build and deployment → Source** 选 **GitHub Actions**。这一步必须手动做——工作流里的 `GITHUB_TOKEN` 没有创建 Pages 站点的权限，`configure-pages` 的自动启用会报 `Resource not accessible by integration`。开启之后再跑一次工作流即可。
+
+CI 里的 pnpm 固定为 8.15.9，和仓库里 `pnpm-lock.yaml` 的 `lockfileVersion 6.0` 对齐。升级 pnpm 大版本时要先重新生成锁文件，否则 `pnpm install --frozen-lockfile` 会失败。
 
 仓库名如果不是 `go-learn`，需要同步修改 `docs/.vitepress/config.mts` 里的 `base`（用户主页仓库要写成 `base: '/'`）。
