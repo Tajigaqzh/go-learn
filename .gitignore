@@ -1,0 +1,16 @@
+# Go 编译产物
+/go-learn
+/go-learn.exe
+/bin/
+*.test
+*.out
+coverage.html
+
+# 文档站
+node_modules
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# 编辑器
+.idea
+.vscode
