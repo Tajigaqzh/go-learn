@@ -18,7 +18,7 @@ CLAUDE.md           同一套规范的另一个入口，内容与 AGENTS.md 保�
 
 ## 环境要求
 
-- Go：1.24 及以上（仓库在 go1.26.3 上验证，示例会用到 `range` over int、`min`/`max`、`slices` 等较新的标准库能力）
+- Go：1.27 及以上（仓库在 go1.27.0 上验证；第 18 章的 JSON 错误信息、第 27 章的响应体排空行为依赖 1.27 的标准库实现，示例还会用到 `range` over int、`min`/`max`、`slices` 等较新的标准库能力）
 - Node.js 20+ 与 pnpm：只在构建文档站时需要
 
 ## 常用命令
