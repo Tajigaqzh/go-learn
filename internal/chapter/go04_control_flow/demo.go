@@ -8,7 +8,7 @@ import (
 // Demo 是本章的入口函数，展示 Go 的所有控制流结构
 func Demo() {
 	fmt.Println("\n========================================")
-	fmt.Println("========== go04_control_flow ==========")
+	fmt.Printf("========== go04_control_flow: %s ==========\n", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_IfBasics()

@@ -27,7 +27,7 @@ import (
 // Demo 是第 5 章的入口函数，按小节顺序演示函数与闭包的核心概念。
 func Demo() {
 	fmt.Println("========================================")
-	fmt.Printf("========== go%02d_%s ==========\n", Chapter, "functions")
+	fmt.Printf("========== go%02d_%s: %s ==========\n", Chapter, "functions", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_FunctionSignature()

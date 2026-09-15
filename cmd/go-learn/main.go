@@ -40,6 +40,8 @@ import (
 	"go-learn/internal/chapter/go29_cli_logging"
 	"go-learn/internal/chapter/go30_ecosystem"
 	"go-learn/internal/chapter/go31_unsafe_cgo"
+	"go-learn/internal/chapter/go32_engineering"
+	"go-learn/internal/chapter/go33_app"
 )
 
 func main() {
@@ -75,4 +77,6 @@ func main() {
 	go29_cli_logging.Demo()
 	go30_ecosystem.Demo()
 	go31_unsafe_cgo.Demo()
+	go32_engineering.Demo()
+	go33_app.Demo()
 }

@@ -18,7 +18,7 @@ import (
 // Demo 是第 2 章的入口函数，按小节顺序演示变量与类型的核心概念。
 func Demo() {
 	fmt.Println("========================================")
-	fmt.Printf("========== go%02d_%s ==========\n", Chapter, "variables")
+	fmt.Printf("========== go%02d_%s: %s ==========\n", Chapter, "variables", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_VarDeclarations()

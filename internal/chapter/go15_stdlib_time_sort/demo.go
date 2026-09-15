@@ -32,7 +32,7 @@ import (
 // Demo 是第 15 章的入口函数，按小节顺序演示标准库的核心能力。
 func Demo() {
 	fmt.Println("========================================")
-	fmt.Printf("========== go%02d_%s ==========\n", Chapter, "stdlib_time_sort")
+	fmt.Printf("========== go%02d_%s: %s ==========\n", Chapter, "stdlib_time_sort", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_TimeBasics()
@@ -46,7 +46,7 @@ func Demo() {
 	section9_MapsMinMaxClear()
 
 	fmt.Println("========================================")
-	fmt.Println("========== 标准库精讲（一）演示结束 ==========")
+	fmt.Printf("========== %s 演示结束 ==========\n", ChapterTitle)
 	fmt.Println()
 }
 

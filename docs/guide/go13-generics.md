@@ -519,6 +519,60 @@ func F[T any](v T) {
 
 ---
 
+## 3 个真实报错怎么读
+
+下面三条都来自实际编译，行号对应各自的最小示例。
+
+**报错 1：类型实参不满足约束**
+
+```go
+type Number interface {
+	~int | ~float64
+}
+func Sum[T Number](a, b T) T { return a + b }
+
+func use() {
+	_ = Sum[string]("a", "b") // string 不在 Number 的类型集里
+}
+```
+
+```text
+scratch_gencheck\main.go:18:10: string does not satisfy Number (string missing in ~int | ~float64)
+```
+
+`Sum[string]` 在调用点就被拦住，`does not satisfy` 后面的括号直接告诉你缺什么：`string missing in ~int | ~float64`。约束错误几乎都是这类「类型集不相交」问题，修复线索就藏在这半句里。
+
+**报错 2：对类型参数做类型断言**
+
+```go
+func as[T any](v T) {
+	_ = v.(string) // T 是 any，编译期无法确定动态类型
+}
+```
+
+```text
+scratch_gencheck\main.go:23:6: invalid operation: cannot use type assertion on type parameter value v (variable of type T constrained by any)
+```
+
+`T` 约束是 `any`，编译器没法在它身上直接断言。要断言得先把 `v` 转成 `any`（写成 `any(v).(string)`），或者改用类型 switch。这与 13.9.3 讲的「不能对类型参数做类型断言」是同一个限制。
+
+**报错 3：`~` 用在命名类型上**
+
+```go
+type Bad string
+type S interface {
+	~Bad // ~ 只能直接跟在基本类型后面
+}
+```
+
+```text
+scratch_gencheck\main.go:29:2: invalid use of ~ (underlying type of Bad is string)
+```
+
+`~T` 里的 `T` 必须是**基本类型本身**，不能是 `type Bad string` 这样的命名类型。想表达「底层类型是 string 的所有类型」，写 `~string` 即可——它天然包含 `Bad`；反过来 `~Bad` 是错的。
+
+---
+
 ## 常见坑速查
 
 | 现象 | 原因 | 解法 |

@@ -31,7 +31,7 @@ import (
 // Demo 是第 10 章的入口函数，按小节顺序演示接口与类型系统。
 func Demo() {
 	fmt.Println("========================================")
-	fmt.Printf("========== go%02d_%s ==========\n", Chapter, "interfaces")
+	fmt.Printf("========== go%02d_%s: %s ==========\n", Chapter, "interfaces", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_ImplicitImplementation()

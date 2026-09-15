@@ -18,7 +18,7 @@ import (
 // Demo 是第 3 章的入口函数，按小节顺序演示运算符与格式化输出。
 func Demo() {
 	fmt.Println("========================================")
-	fmt.Printf("========== go%02d_%s ==========\n", Chapter, "operators_fmt")
+	fmt.Printf("========== go%02d_%s: %s ==========\n", Chapter, "operators_fmt", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_ArithmeticOperators()

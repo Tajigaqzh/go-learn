@@ -38,7 +38,7 @@ func Demo() {
 	section9_ByteSliceConversion()
 
 	fmt.Println("========================================")
-	fmt.Printf("========== %s演示结束 ==========\n", ChapterTitle)
+	fmt.Printf("========== %s 演示结束 ==========\n", ChapterTitle)
 	fmt.Println()
 }
 

@@ -444,7 +444,17 @@ found packages a (a.go) and b (b.go) in C:\...\.scratch\mixedpkgs
 | `go version -m <二进制>` | 读二进制里的模块信息 | 定位线上版本 |
 | `go clean -cache` | 清构建缓存 | 排查「改了没生效」时 |
 
-## 1.12 练习
+## 1.12 常见坑速查
+
+| 现象 | 原因 | 解法 |
+| --- | --- | --- |
+| 在某个目录里 `go run` 报 `go.mod file not found` | 当前目录不在任何模块内 | `go mod init`，或回到模块根目录执行 |
+| `imported and not used` / `declared and not used` | Go 把未使用的导入、局部变量当作编译错误，不是警告 | 删掉，或用 `_ = x` 显式丢弃 |
+| `go vet` 报 `Printf` 格式错误，但 `go run` 照样跑 | 这类错误到运行期才显形，编译器拦不住 | 按 vet 提示改；把 `go vet` 接进 CI |
+| 改了源码，反复 `go run` 输出还是旧的 | 命中构建/测试缓存 | `go clean -cache`（测试则 `go clean -testcache`） |
+| 多个文件里 `init` 的执行顺序和文件摆放顺序不一致 | 编译按文件名字母序、再按出现顺序执行 | 别依赖隐式顺序，需要先后就用依赖关系显式控制 |
+
+## 1.13 练习
 
 1. 在本章包下新建 `echo.go`，实现 `func Echo(name string) string`：名字为空时返回 `"Hello, World!"`，否则返回 `"Hello, <名字>!"`；再用表驱动测试覆盖空名字、英文名和中文名三种情况。
 2. 在 `go01_hello` 包里再加一个文件 `extra.go`，写一个 `init` 打印任意标记，然后运行 `go test ./internal/chapter/go01_hello/`，观察它与 `demo.go`、`version.go` 里两个 `init` 的先后顺序，说出排序规则。
@@ -544,7 +554,7 @@ no required module provides package go-learn/internal/chapter/go01_hello; to add
 
 :::
 
-## 1.13 小结
+## 1.14 小结
 
 - Go 的环境体检就三条：`go version`、`go env`、`go list ./...`；环境变量为空 ≠ 默认值为空，实际取值要问 `go env`。
 

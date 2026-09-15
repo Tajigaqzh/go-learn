@@ -38,7 +38,7 @@ var embedFS embed.FS
 // Demo 是第 17 章的入口函数，按小节顺序演示文件、路径与 IO 的核心能力。
 func Demo() {
 	fmt.Println("========================================")
-	fmt.Printf("========== go%02d_%s ==========\n", Chapter, "files_io")
+	fmt.Printf("========== go%02d_%s: %s ==========\n", Chapter, "files_io", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_ReaderWriter()

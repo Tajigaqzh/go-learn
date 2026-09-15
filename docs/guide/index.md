@@ -65,8 +65,8 @@
 | 第 29 章 | [命令行工具、日志与配置](./go29-cli-logging) | `os.Args` 与 `flag`、子命令与 cobra、退出码、stdout / stderr 分流、`log/slog` 结构化日志与 Handler / Level、请求 ID 与日志上下文、日志落盘与轮转、配置优先级与环境变量、敏感信息脱敏 | `internal/chapter/go29_cli_logging/` |
 | 第 30 章 | [常用第三方生态与选型](./go30-ecosystem) | Web 框架（gin / echo / fiber / 标准库）、ORM 与 SQL 构建器（GORM / ent / sqlc / sqlx）、依赖注入（wire / fx / 手动注入）、参数校验（validator）、测试库（testify / gomock）、日志库、配置库、CLI 库、gRPC / WebSocket / 消息队列概览、选型原则与避免过度依赖 | `internal/chapter/go30_ecosystem/` |
 | 第 31 章 | [unsafe、cgo 与代码生成](./go31-unsafe-cgo) | `unsafe.Sizeof` / `Offsetof` / `Alignof`、`unsafe.Pointer` 与 `uintptr` 的规则、`runtime.KeepAlive`、cgo 类型映射与内存生命周期、`C.CString` 配 `C.free`、`//export` 反向导出、cgo 的代价与构建约束、`CGO_ENABLED=0`、`//go:generate`、`//go:embed` | `internal/chapter/go31_unsafe_cgo/`、`examples/cgo/` |
-| 第 32 章 | 工程实践与项目结构（规划中） | 项目布局（`cmd` / `internal` / `pkg`）、分层与依赖方向、依赖注入与可测试性、Functional Options 等 Go 惯用法、配置与环境区分、错误与日志规范、`go generate`、Makefile、lint 规则、版本注入（`-ldflags`）、依赖治理与安全扫描 | `internal/chapter/go32_engineering/` |
-| 第 33 章 | 综合实战：Go 服务端项目（规划中） | 分层架构、配置加载、日志、数据库与迁移、REST 接口、中间件（日志 / 恢复 / 请求 ID）、错误码设计、优雅关闭、单元与集成测试、基准测试、Docker 打包 | `internal/chapter/go33_app/` |
+| 第 32 章 | [工程实践与项目结构](./go32-engineering) | 项目布局（`cmd` / `internal` / `pkg`）、分层与依赖方向、依赖注入与可测试性、Functional Options 等 Go 惯用法、配置与环境区分、错误与日志规范、`go generate`、Makefile、lint 规则、版本注入（`-ldflags`）、依赖治理与安全扫描 | `internal/chapter/go32_engineering/` |
+| 第 33 章 | [综合实战：Go 服务端项目](./go33-app) | 分层架构（handler → service → repository）、手动依赖注入、配置加载、SQLite 迁移、REST 接口与统一错误码、中间件（请求 ID / 访问日志 / panic 恢复）、优雅关闭、单元与集成测试、基准测试、多阶段 Docker 打包 | `internal/chapter/go33_app/` |
 | 第 34 章 | 部署、可观测性与运维（规划中） | 交叉编译与 `CGO_ENABLED=0`、多阶段 Docker 构建与镜像瘦身、`-ldflags` 注入版本、容器探针与健康检查、在线 `pprof`、指标（expvar / Prometheus）、结构化日志采集、优雅重启、压测与容量评估、发布清单与回滚 | `internal/chapter/go34_ops/` |
 
 ### 附录

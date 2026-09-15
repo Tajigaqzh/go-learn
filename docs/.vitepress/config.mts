@@ -58,6 +58,8 @@ export default defineConfig({
           { text: '第 29 章 · 命令行工具、日志与配置', link: '/guide/go29-cli-logging' },
           { text: '第 30 章 · 常用第三方生态与选型', link: '/guide/go30-ecosystem' },
           { text: '第 31 章 · unsafe、cgo 与代码生成', link: '/guide/go31-unsafe-cgo' },
+          { text: '第 32 章 · 工程实践与项目结构', link: '/guide/go32-engineering' },
+          { text: '第 33 章 · 综合实战：Go 服务端项目', link: '/guide/go33-app' },
         ],
       },
       {
@@ -124,6 +126,8 @@ export default defineConfig({
           { text: '第 29 章 · 命令行工具、日志与配置', link: '/guide/go29-cli-logging' },
           { text: '第 30 章 · 常用第三方生态与选型', link: '/guide/go30-ecosystem' },
           { text: '第 31 章 · unsafe、cgo 与代码生成', link: '/guide/go31-unsafe-cgo' },
+          { text: '第 32 章 · 工程实践与项目结构', link: '/guide/go32-engineering' },
+          { text: '第 33 章 · 综合实战：Go 服务端项目', link: '/guide/go33-app' },
         ],
       },
       {

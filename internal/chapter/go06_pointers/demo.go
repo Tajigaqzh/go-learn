@@ -27,7 +27,7 @@ import (
 // Demo 是第 6 章的入口函数，按小节顺序演示指针与内存的核心概念。
 func Demo() {
 	fmt.Println("========================================")
-	fmt.Printf("========== go%02d_%s ==========\n", Chapter, "pointers")
+	fmt.Printf("========== go%02d_%s: %s ==========\n", Chapter, "pointers", ChapterTitle)
 	fmt.Println("========================================")
 
 	section1_AddressAndDereference()

@@ -76,8 +76,8 @@ pnpm docs:preview    # 预览构建结果
 | 第 29 章 | 命令行工具、日志与配置 | [go29-cli-logging](docs/guide/go29-cli-logging.md) | `internal/chapter/go29_cli_logging/` |
 | 第 30 章 | 常用第三方生态与选型 | [go30-ecosystem](docs/guide/go30-ecosystem.md) | `internal/chapter/go30_ecosystem/` |
 | 第 31 章 | unsafe、cgo 与代码生成 | [go31-unsafe-cgo](docs/guide/go31-unsafe-cgo.md) | `internal/chapter/go31_unsafe_cgo/` |
-| 第 32 章 | 工程实践与项目结构 | 规划中 | `internal/chapter/go32_engineering/` |
-| 第 33 章 | 综合实战：Go 服务端项目 | 规划中 | `internal/chapter/go33_app/` |
+| 第 32 章 | 工程实践与项目结构 | [go32-engineering](docs/guide/go32-engineering.md) | `internal/chapter/go32_engineering/` |
+| 第 33 章 | 综合实战：Go 服务端项目 | [go33-app](docs/guide/go33-app.md) | `internal/chapter/go33_app/` |
 | 第 34 章 | 部署、可观测性与运维 | 规划中 | `internal/chapter/go34_ops/` |
 
 ## 文档站部署
